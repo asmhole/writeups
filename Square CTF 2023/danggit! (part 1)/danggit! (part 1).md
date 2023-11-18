@@ -105,4 +105,4 @@ Entering the password into the service, we have the flag given to us `flag{aH_PU
 
 This was by far the most guessy challenge of the CTF.
 
-P.S. the repo folder has been attached incase you would like to take a look. however, 9/10 doctors do not recommend doing so for your own sanity, and the 10th is dead.
+P.S. the repo folder has been attached in case you would like to take a look. however, 9/10 doctors do not recommend doing so for your own sanity, and the 10th is dead.
