@@ -30,8 +30,6 @@ export GIT_COMMITER_DATE="<commit time string>"
 git commit -m '<commit message>' --time "<commit time string>"
 ```
 
-However, this challenge would be the one to nearly drive me crazy in this CTF.
-
 First commit. Easy.
 
 ```sh
