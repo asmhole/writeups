@@ -102,10 +102,10 @@ public class GuessThePassword {
     }
 }
 ```
-At first, this may look like a worrysome sight, but a closer look reveals `isPassword` only calls `shuffle`, `getHash`, and `binToHex`. The other crypto functions are called once you have the correct password hash to AES decrypt `FLAG` to reveal our answer, made significantly easier with the observation that `generateAESKeyFromPassword` is a onw-way function because it doesn't initialize `salt`.
+At first, this may look like a worrisome sight, but a closer look reveals `isPassword` only calls `shuffle`, `getHash`, and `binToHex`. The other crypto functions are called once you have the correct password hash to AES decrypt `FLAG`, revealing our answer, made significantly easier with the observation that `generateAESKeyFromPassword` is a one-way function because it doesn't initialize `salt`.
 
-Before directly checking for hash equality, `isPassword` first shuffles the password's hash using a seeded randomizer. Upon closer inspection, the seed is constant, and thus the shuffler will always randomize the input the same way. Applying this deterministic tranformation in reverse gives us the correct password's hash.
+Before directly checking for hash equality, `isPassword` first shuffles the password's hash using a seeded randomizer. Upon closer inspection, the seed is constant, and thus the shuffler will always randomize the input the same way. Applying this deterministic transformation in reverse gives us the correct password's hash.
 
-We aren't done yet; `getFlag` expects the raw password, so we have to reverse the correct password's hash. A simple SHA1 lookup gives us the incredibly cimactic `SQSQSQ` as the password.
+We aren't done yet; `getFlag` expects the raw password, so we have to reverse the correct password's hash. A simple SHA lookup gives us the incredibly climactic `SQSQSQ` as the password.
 
-Inputting this password successfully decrypts the flag `flag{yeah_i_use_google_pixel_6a}` (use ios loser)
+Inputting this password successfully decrypts the flag `flag{yeah_i_use_google_pixel_6a}`
